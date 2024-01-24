@@ -1,0 +1,22 @@
+consumers
+cards
+partners
+societies
+
+create-purchase 2.5 nameSociety1 emailConsumer1@gmail.com  // chiffre exact de point gagné
+cards // point plus
+
+reload-balance 12 emailConsumer1@gmail.com
+cards  // argent en plus sur carte
+create-purchase-with-card 10 nameSociety1 emailConsumer1@gmail.com
+cards // point plus
+
+create-purchase 14 nameSociety1 emailConsumer1@gmail.com
+create-purchase 8 nameSociety1 emailConsumer1@gmail.com
+create-purchase 13 nameSociety1 emailConsumer1@gmail.com
+create-purchase 2.5 nameSociety1 emailConsumer1@gmail.com
+create-purchase 1.5 nameSociety1 emailConsumer1@gmail.com
+create-purchase 5 nameSociety1 emailConsumer1@gmail.com
+
+cards // plein de point
+consumers // enfin vfp

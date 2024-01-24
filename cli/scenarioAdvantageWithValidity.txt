@@ -1,0 +1,9 @@
+create-advantage-with-validity nameAdvantageBus nameSociety1 1 "false" 2 1 1 "P1D" "P7D" "false"
+advantages
+create-purchase 2.5 nameSociety1 emailConsumer1@gmail.com
+get-advantages-elligible emailConsumer1@gmail.com
+select-advantage "nameAdvantageBus" "emailConsumer1@gmail.com"  // passe a vailbale
+get-selected-advantages-elligible emailConsumer1@gmail.com
+use-advantage nameAdvantageBus emailConsumer1@gmail.com  //reste available mais nb use deja utlise
+get-selected-advantages-elligible emailConsumer1@gmail.com // normalement vide
+use-advantage nameAdvantageBus emailConsumer1@gmail.com // ne marche pas car deja utlisé une fois dans la journée c'est fait expres pour montrer aux prof

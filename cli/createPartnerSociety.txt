@@ -1,0 +1,17 @@
+partners
+societies
+
+create-partner-account namePartner1 emailPartner1@gmail.com passwordPartner1  // ajout horaire par defaut
+create-society nameSociety1 emailPartner1@gmail.com 07:57:22 07:57:22 "42 rue de la paix, 75000 Paris"
+
+create-partner-account namePartner2 emailPartner2@gmail.com passwordPartner2  // ajout horaire par defaut
+create-society nameSociety2 emailPartner2@gmail.com 07:57:22 07:57:22 " 24 Rue Frédéric Chopin, 75000 Paris"
+
+create-partner-account namePartner3 emailPartner3@gmail.com passwordPartner3  // ajout horaire par defaut
+create-society nameSociety3 emailPartner3@gmail.com 07:57:22 07:57:22 " 7 boulevard Albin Durand, 75000 Paris"
+
+create-partner-account namePartner4 emailPartner4@gmail.com passwordPartner4  // ajout horaire par defaut
+create-society nameSociety4 emailPartner4@gmail.com 07:57:22 07:57:22 "29 rue Sébastopol, 75000 Paris"
+
+partners
+societies

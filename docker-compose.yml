@@ -1,0 +1,62 @@
+version: "3"
+
+services:
+
+  # The Multifidelitycd  backend in SpringBoot
+  multifidelity-server:
+    image: devopsteama/backend:2.0
+    container_name: server
+    environment:
+      - BANK_WITH_PORT=bank:9090
+      - PARKING_WITH_PORT=parking:9080
+      - POSTGRES_HOST=postgres:5432
+    entrypoint: "bash -c '/opt/app/wait-for-it.sh $${POSTGRES_HOST} -- java -jar /opt/app/app.jar --bank.host.baseurl=http://$${BANK_WITH_PORT} --iswypls.host.baseurl=http://$${PARKING_WITH_PORT}/iswypls'"
+    depends_on:
+      - multifidelity-bank
+      - multifidelity-parking
+      - postgres
+
+  # The cli
+  multifidelity-cli:
+    image: devopsteama/cli:2.0
+    container_name: cli
+    environment:
+      - SERVER_WITH_PORT=server:8081
+    entrypoint: "bash -c '/opt/app/wait-for-it.sh $${SERVER_WITH_PORT} -- java -jar /opt/app/app.jar'"
+    depends_on:
+      - multifidelity-server
+    stdin_open: true # open the stdin
+    tty: true # keep the container running
+    # Add a volume for the demo
+    volumes:
+      - ./cli/createConsumer.txt:/opt/app/createConsumer.txt
+      - ./cli/createPartnerSociety.txt:/opt/app/createPartnerSociety.txt
+      - ./cli/scenarioAdvantageWithValidityParking.txt:/opt/app/scenarioAdvantageWithValidityParking.txt
+      - ./cli/scenarioSondage.txt:/opt/app/scenarioSondage.txt
+      - ./cli/scenarioStatistics.txt:/opt/app/scenarioStatistics.txt
+
+  # The postgres DB to be connected to the backend server
+  postgres:
+    image: postgres:15.2
+    container_name: db
+    environment:
+      - POSTGRES_PASSWORD=postgrespass
+      - POSTGRES_USER=postgresuser
+      - POSTGRES_DB=tcf-db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  # The bank
+  multifidelity-bank:
+    image: devopsteama/bank:2.0
+    container_name: bank
+
+  # The parking
+  multifidelity-parking:
+    image: devopsteama/iswypls:2.0
+    container_name: parking
+
+
+# Data persistence
+volumes:
+  postgres-data:

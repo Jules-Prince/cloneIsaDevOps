@@ -1,0 +1,7 @@
+create-advantage nameAdvantage1 nameSociety1 1 "false" 2 1
+advantages
+create-purchase 2.5 nameSociety1 emailConsumer1@gmail.com
+get-advantages-elligible emailConsumer1@gmail.com
+select-advantage "nameAdvantage1" "emailConsumer1@gmail.com"
+get-selected-advantages-elligible emailConsumer1@gmail.com
+use-advantage nameAdvantage1 emailConsumer1@gmail.com

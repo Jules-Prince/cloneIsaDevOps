@@ -1,0 +1,10 @@
+create-advantage-with-validity nameAdvantageParc nameSociety1 1 "false" 2 1 2 "P1D" "P7D" "true"
+advantages
+create-purchase 2.5 nameSociety1 emailConsumer1@gmail.com
+get-advantages-elligible emailConsumer1@gmail.com
+select-advantage "nameAdvantageParc" "emailConsumer1@gmail.com" // passe available
+get-selected-advantages-elligible emailConsumer1@gmail.com
+use-advantage nameAdvantageParc emailConsumer1@gmail.com // in progress
+get-selected-advantage nameAdvantageParc emailConsumer1@gmail.com // repasé a available car api parking envoi nodif
+get-selected-advantages-elligible emailConsumer1@gmail.com // nb use = 2 ici donc on peut reutilisé
+use-advantage nameAdvantageParc emailConsumer1@gmail.com // on peut le reetilisé

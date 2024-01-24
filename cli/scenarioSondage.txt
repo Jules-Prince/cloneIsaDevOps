@@ -1,0 +1,8 @@
+create-survey nameSurvey "satisfaction survey" compte,carte,Paiement,points
+
+add-answer nameSurvey emailConsumer1@gmail.com VERY_SATISFIED,SATISFIED,UNSATISFIED,NEUTRAL
+add-answer nameSurvey emailConsumer2@gmail.com SATISFIED,SATISFIED,SATISFIED,SATISFIED
+add-answer nameSurvey emailConsumer3@gmail.com UNSATISFIED,NEUTRAL,UNSATISFIED,NEUTRAL
+add-answer nameSurvey emailConsumer4@gmail.com VERY_SATISFIED,SATISFIED,VERY_SATISFIED,VERY_SATISFIED
+
+get-satisfaction nameSurvey

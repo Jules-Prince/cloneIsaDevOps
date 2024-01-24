@@ -1,0 +1,25 @@
+delete-consumers
+consumers
+signin emailConsumer1@gmail.com passwordConsumer1
+update-consumer emailConsumer1@gmail.com passwordConsumer1 8969830123456789 FR12AB34BA
+create-card emailConsumer1@gmail.com
+
+signin emailConsumer2@gmail.com passwordConsumer2
+update-consumer emailConsumer2@gmail.com passwordConsumer2 8969830123456789 FR12AB34B1
+create-card emailConsumer2@gmail.com
+
+signin emailConsumer3@gmail.com passwordConsumer3
+update-consumer emailConsumer3@gmail.com passwordConsumer3 8969830123456789 FR12AB34B2
+create-card emailConsumer3@gmail.com
+
+
+signin emailConsumer4@gmail.com passwordConsumer4
+update-consumer emailConsumer4@gmail.com passwordConsumer4 8969830123456789 FR12AB34B3
+create-card emailConsumer4@gmail.com
+
+
+signin emailConsumer5@gmail.com passwordConsumer5
+update-consumer emailConsumer5@gmail.com passwordConsumer5 8969830123456789 FR12AB34BZ
+create-card emailConsumer5@gmail.com
+
+consumers

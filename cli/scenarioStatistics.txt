@@ -1,0 +1,35 @@
+create-purchase 12.5 nameSociety1 emailConsumer1@gmail.com
+create-purchase 2.5 nameSociety2 emailConsumer2@gmail.com
+create-purchase 10 nameSociety3 emailConsumer3@gmail.com
+create-purchase 8 nameSociety1 emailConsumer4@gmail.com
+
+
+create-advantage-with-validity nameAdvantage2 nameSociety1 1 "false" 2 1 2 "P1D" "P7D" "true"
+create-purchase 2.5 nameSociety2 emailConsumer2@gmail.com
+select-advantage "nameAdvantage2" "emailConsumer2@gmail.com"
+use-advantage nameAdvantage2 emailConsumer2@gmail.com
+
+create-advantage-with-validity nameAdvantage3 nameSociety1 1 "false" 2 1 2 "P1D" "P7D" "true"
+create-purchase 2.5 nameSociety3 emailConsumer3@gmail.com
+select-advantage "nameAdvantage3" "emailConsumer3@gmail.com"
+use-advantage nameAdvantage3 emailConsumer3@gmail.com
+
+create-advantage-with-validity nameAdvantage4 nameSociety1 1 "false" 2 1 2 "P1D" "P7D" "true"
+create-purchase 2.5 nameSociety4 emailConsumer4@gmail.com
+select-advantage "nameAdvantage4" "emailConsumer4@gmail.com"
+use-advantage nameAdvantage4 emailConsumer4@gmail.com
+
+
+get-profit-of-society nameSociety1
+get-profit-of-society nameSociety2
+get-profit-of-society nameSociety3
+get-profit-of-society nameSociety4
+
+get-profit
+
+get-frequency-of-society nameSociety1
+get-frequency-of-society nameSociety2
+get-frequency-of-society nameSociety3
+get-frequency-of-society nameSociety4
+
+get-frequency
